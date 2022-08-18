@@ -1,22 +1,29 @@
 // Code your solutions in this file
+const gifts = ["teddy bear", "drone", "doll"];
 
-const cards = ["Lisa", "Kaitlyn", "Jan", "surprise"];
+function wrapGifts(gifts) {
+  for (let i = 0; i < gifts.length; i++) {
+    console.log(`Wrapped ${gifts[i]} and added a bow!`);
+  }
 
-const newArray = [];
-function writeCards(cards) {
-    for (let i = 0; i < cards.length; i++) {
-        
-        newArray.push(`Thank you, ${cards[i]}, for the wonderful surprise gift!`);
-    }
-return newArray
+  return gifts;
 }
 
-function countDown(integer) {
-    while (integer >= 0) {
-        console.log(integer);
-        integer--;
+wrapGifts(gifts); 
+
+function writeCards(arr, event){
+    const newArr = []; 
+    for(let i = 0; i < arr.length; i ++){
+        newArr.push(`Thank you, ${arr[i]}, for the wonderful ${event} gift!`);
+    }
+    return newArr; 
+}
+
+function countDown(number){
+    while(number > -1){
+        console.log(number); 
+        number--; 
     }
 }
-countDown(4);
 
 
